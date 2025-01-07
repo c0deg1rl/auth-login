@@ -1,30 +1,25 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import RootLayout from './pages/Root'
-import Error from './pages/Error'
-import LogIn from './pages/LogIn'
-import Homepage from './pages/Homepage'
-
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RootLayout from './pages/Root';
+import Error from './pages/Error';
+import LogIn from './pages/LogIn';
+import Homepage from './pages/Homepage';
 
 const router = createBrowserRouter([
   { 
-    path: '/',
+    path: '/auth-login/',
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Homepage /> },
-      { path: 'login', element: <LogIn />},
-      // { path: 'sign-in', element: <SignIn />},
-    ]
+      { path: '/auth-login/', element: <Homepage /> },
+      { path: '/auth-login/login', element: <LogIn /> },
+    ],
   },
-])
+]);
 
 const App = () => {
-
   return (
-
-    <div className='container mx-auto'>
-      <RouterProvider router={router}/>
+    <div className="container mx-auto">
+      <RouterProvider router={router} />
     </div>
   );
 };
