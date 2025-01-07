@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import MyButton from '../components/MyButton';
+import Box from '@mui/material/Box';
 
 function LogIn() {
 
@@ -57,7 +58,7 @@ function LogIn() {
   
 
     return(
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <Box sx={{ textAlign: 'center', mt: 6, display: 'flex', flexDirection: 'column' }}>
         <h1>Hello, welcome!</h1>
         {user ? (
           // LoggedIn
@@ -78,7 +79,7 @@ function LogIn() {
           // Logged out
           <div>
             <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
-            <form>
+            <form style={{display: 'flex', flexDirection: 'column', maxWidth: '500px', margin: '20px auto', gap: '20px'}}>
               <input
                 type="email"
                 placeholder="Email"
@@ -137,7 +138,7 @@ function LogIn() {
           </div>
         )}
   
-      </div>
+      </Box>
     );
 }
 
