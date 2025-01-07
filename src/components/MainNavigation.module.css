@@ -1,7 +1,14 @@
 .header {
-  margin: auto;
   padding: 2rem 0 2rem;
   display: flex;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  margin-bottom: 50px;
 }
 
 .list {

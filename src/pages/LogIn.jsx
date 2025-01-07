@@ -58,8 +58,8 @@ function LogIn() {
   
 
     return(
-        <Box sx={{ textAlign: 'center', mt: 6, display: 'flex', flexDirection: 'column' }}>
-        <h1>Hello, welcome!</h1>
+        <Box sx={{ textAlign: 'center', mt: 10, display: 'flex', flexDirection: 'column' }}>
+        <h1>Hello!</h1>
         {user ? (
           // LoggedIn
           <div>

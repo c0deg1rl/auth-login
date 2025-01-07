@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div className="container mx-auto">
+    <div>
       <RouterProvider router={router} />
     </div>
   );
